@@ -34,7 +34,7 @@ class App extends React.Component {
                 <select onChange={this.getAlbumImages.bind(this)} className="albumSelectBox">
                     <option label="Select..." />
                     {this.state.albums.map(album => {
-                        return <option className="albums-list" value={album.id} >{album.title}</option>
+                        return <option className="albums-list" key={album.id} value={album.id}>{album.title}</option>
                     })}</select>
                 <hr/>
                 <div className="album-images">
