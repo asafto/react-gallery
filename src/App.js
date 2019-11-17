@@ -41,7 +41,7 @@ class App extends React.Component {
                 <hr/>
                 <div className="album-images">
                     {this.state.images.map(image => {
-                        return <a href={image.url}>
+                        return <a href={image.url} key={image.id}>
                             <img src={image.thumbnailUrl} alt={image.title} key={image.id} />
                         </a>
                     })}
